@@ -30,23 +30,23 @@
 //     }
 
 //     getArea(){
-//         return 2*(this.a + this.b)
+//         let p = this.getPerimeter() / 2
+//         return Math.sqrt( p * ( p - this.a) * (p - this.b) * (p - this.c))
 //     }
         
-//     isRigthTriangle(){
-//         if( this.a === this.b){
-//             return true
-//         }else{
-//             return false
-//         }
+//     isRightTriangle(){
+//         return(this.a * this.a + this.b * this.b === this.c * this.c ||
+//         this.a * this.a + this.c * this.c === this.b * this.b ||
+//         this.b * this.b + this.c * this.c === this.a * this.a )
+
 //     }
 // }
 
-// let trian = new Triangle(4, 4, 10)
+// let trian = new Triangle(3, 4, 5)
 
 // console.log("პერიმეტრი:", trian.getPerimeter())
 // console.log("ფართობი:", trian.getArea())
-// console.log("აროს ტოლფერდა?", trian.isRigthTriangle())
+// console.log("აროს ტოლფერდა?", trian.isRightTriangle())
 
 
 // 2) შექმენი Smartphone (სმარტფონი) კლასი property-ებით: brand, model, releaseYear
@@ -114,6 +114,9 @@
 //         }
 //         this.balance = this.balance - amount
 //         this.history.push(`Transferred to ${receiver.ownerName}-s: ${amount}`)
+
+//         receiver.balance = receiver.balance + amount
+//         receiver.history.push(`Received from ${this.ownerName}-s: ${amount}`)
 //     }
 
 //     getHistory(){
@@ -169,3 +172,33 @@
 // myWishlist.deleteItem(1)
 
 // console.log(myWishlist.items)
+
+
+// 5)შექმენი Freelancer (ფრილანსერი) კლასი მეთოდით calculateEarnings(), რომელიც დათვლის შემოსავალს შესრულებული საათებისა 
+// და საათობრივი ტარიფის მიხედვით, დამატებით optional bonus-ს გადამეტებულ საათებზე (მაგ >160 სთ).
+
+
+class Freelancer{
+    constructor(name, hourlyRate){
+        this.name = name
+        this.hourlyRate = hourlyRate
+    }
+
+calculateEarnings(hours){
+    const standartHours = 160
+
+    if( hours <= this.hourlyRate){
+        return hours * this.hourlyRate
+    }else{
+        let regularHours = standartHours * this.hourlyRate
+        let overTime = hours - this.hourlyRate
+        let bonusTime = overTime * ( this.hourlyRate * 1.5)
+        return regularHours + bonusTime
+        }
+    }
+}
+
+let worker = new Freelancer ("Nick", 20)
+
+console.log( "Semosavali 150St:", worker.calculateEarnings(150))
+console.log( "Semosavali 190St:", worker.calculateEarnings(190))
