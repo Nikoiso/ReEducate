@@ -8,7 +8,7 @@ export default function ProductCard({product, onAddToCart}) {
     return (
         <div
         className={`product-card ${
-          product.category === "Electronics" ? "electronics" : ""
+          product.category === "Electronic" ? "electronic" : ""
         }`}
       >
         <h2>{product.title}</h2>
