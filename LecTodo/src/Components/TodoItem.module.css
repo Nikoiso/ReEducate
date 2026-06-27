@@ -1,0 +1,85 @@
+.todoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #F0F2F5;
+    transition: opacity 0.3s;
+  }
+  
+  /* თუ შესრულებულია, ტექსტი ოდნავ მკრთალდება */
+  .todoItem.completed .itemDetails h3 {
+    text-decoration: line-through;
+    color: #A0A0A0;
+  }
+  
+  .itemDetails h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222222;
+    margin: 0 0 4px 0;
+  }
+  
+  .itemDetails p {
+    font-size: 12px;
+    color: #A0A0A0;
+    margin: 0;
+  }
+  
+  .itemActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .toggleButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #10E7B3; /* ფირუზისფერი ჩარჩო */
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.2s;
+  }
+  
+  /* როცა შეუსრულებელია, წრე ცარიელია */
+  .toggleButton:not(.active) .circle {
+    border-color: #10E7B3;
+    background-color: transparent;
+  }
+  
+  /* როცა მონიშნულია (აქტიურია) */
+  .toggleButton.active .circle {
+    background-color: #10E7B3;
+  }
+  
+  .deleteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .trashImg {
+    width: 18px; /* იდენტური მცირე ზომის ურნის აიქონი */
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+  
+  .deleteButton:hover .trashImg {
+    opacity: 1;
+  }
