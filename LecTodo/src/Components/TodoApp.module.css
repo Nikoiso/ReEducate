@@ -1,0 +1,62 @@
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F0F2F5;
+    font-family: system-ui, -apple-system, sans-serif;
+    gap: 120px;
+  }
+  
+  .todoTitle {
+    font-size: 116px;
+    font-weight: 800;
+    color: #0076EC;
+    letter-spacing: -3px;
+    margin: 0;
+    user-select: none;
+    height: 350px;
+    width: 500px;
+  }
+  
+  .todoCard {
+    width: 380px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+  }
+  
+  .todoBanner {
+    height: 170px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+  
+  .bannerText {
+    color: #FFFFFF;
+    text-align: right;
+  }
+  
+  .bannerText span {
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+  }
+  
+  .bannerText h2 {
+    font-size: 34px;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -1px;
+  }
+  
+  .todoList {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 20px 20px;
+  }
