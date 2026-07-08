@@ -1,0 +1,158 @@
+.infoContainer {
+    max-width: 445px;
+  }
+  
+  .company {
+    text-transform: uppercase;
+    color: #FF7E1B;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 44px;
+    line-height: 48px;
+    color: #1D2026;
+    margin: 0 0 32px 0;
+    font-weight: 700;
+  }
+  
+  .description {
+    color: #69707D;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0 0 28px 0;
+  }
+  
+  .priceSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+  
+  .currentPriceRow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1D2026;
+  }
+  
+  .discount {
+    background: #FFEEE2;
+    color: #FF7E1B;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .oldPrice {
+    color: #B6BCC8;
+    text-decoration: line-through;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  
+  .actionsRow {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+  }
+  
+  .counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F7F8FD;
+    border-radius: 10px;
+    width: 157px;
+    height: 56px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  
+  .counter button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #FF7E1B;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+  }
+  
+  .counter button:hover {
+    opacity: 0.6;
+  }
+  
+  .counter span {
+    font-weight: 700;
+    color: #1D2026;
+    font-size: 16px;
+  }
+  
+  .addBtn {
+    flex: 1;
+    height: 56px;
+    background: #FF7E1B;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 20px 50px rgba(255, 126, 27, 0.3);
+    transition: opacity 0.2s ease;
+  }
+  
+  .addBtn:hover {
+    opacity: 0.7;
+  }
+  
+  .btnIcon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  @media (max-width: 800px) {
+    .infoContainer {
+      padding: 24px;
+      max-width: 100%;
+    }
+    .title {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 16px;
+    }
+    .priceSection {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .actionsRow {
+      flex-direction: column;
+    }
+    .counter {
+      width: 100%;
+    }
+    .addBtn {
+      width: 100%;
+    }
+  }
