@@ -17,6 +17,7 @@ export interface WorkStep {
   number: string;
   title: string;
   description: string;
+  category: string;
 }
 
 export interface Testimonial {
@@ -26,6 +27,7 @@ export interface Testimonial {
   text: string;
   rating: number;
   description?: string;
+  category: string;
 }
 
 
@@ -33,4 +35,5 @@ export interface BakerInfo {
   name: string;
   role: string;
   description: string;
+  category: string;
 }
