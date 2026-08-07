@@ -6,9 +6,9 @@ export interface NavItem {
 export interface Product {
   id: number;
   name: string;
-  category: string;
   price: string;
   image: string;
+  category?: string;
   size?: "large" | "medium" | "small";
   description?: string;
 }
@@ -17,7 +17,7 @@ export interface WorkStep {
   number: string;
   title: string;
   description: string;
-  category: string;
+  category?: string;
 }
 
 export interface Testimonial {
@@ -27,13 +27,12 @@ export interface Testimonial {
   text: string;
   rating: number;
   description?: string;
-  category: string;
+  category?: string;
 }
-
 
 export interface BakerInfo {
   name: string;
   role: string;
   description: string;
-  category: string;
+  category?: string;
 }
