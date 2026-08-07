@@ -10,6 +10,7 @@ export interface Product {
   price: string;
   image: string;
   size?: "large" | "medium" | "small";
+  description?: string;
 }
 
 export interface WorkStep {
@@ -24,7 +25,9 @@ export interface Testimonial {
   role: string;
   text: string;
   rating: number;
+  description?: string;
 }
+
 
 export interface BakerInfo {
   name: string;
