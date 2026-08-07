@@ -69,9 +69,7 @@ const MainContent = () => {
               className="relative mx-auto h-[300px] w-full max-w-[390px]"
             >
               <div className="absolute left-[8%] top-[4%] h-[55%] w-[55%] bg-black" />
-
               <div className="absolute bottom-[4%] left-[17%] h-[65%] w-[67%] rounded-full bg-[#A7B999]" />
-
               <div className="absolute bottom-[12%] left-[25%] z-10 h-[62%] w-[58%] bg-[#BFC1BC]" />
             </motion.div>
 
@@ -110,13 +108,22 @@ const MainContent = () => {
                   <div>
                     <h3 className="text-[10px] font-bold">Made With Love</h3>
                     <p className="mt-1 max-w-[300px] text-[8px] leading-5 text-black/60">
-                      Every product is prepared by hand with attention to
-                      detail.
+                      Every product is prepared by hand with attention to detail.
                     </p>
                   </div>
                 </div>
               </div>
             </motion.div>
+          </div>
+
+          <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-4">
+            {workSteps.map((step) => (
+              <div key={step.number} className="rounded-xl bg-white/40 p-4 backdrop-blur-sm">
+                <span className="text-xl font-bold text-[#F2A64E]">{step.number}</span>
+                <h3 className="mt-1 font-serif text-[14px] font-black">{step.title}</h3>
+                <p className="mt-1 text-[8px] leading-4 text-black/60">{step.description}</p>
+              </div>
+            ))}
           </div>
 
           <motion.div
@@ -143,9 +150,7 @@ const MainContent = () => {
                   key={title}
                   whileHover={{ scale: 1.03 }}
                   className={`relative min-h-[150px] p-6 ${
-                    index === 2
-                      ? "bg-[#A7B999]"
-                      : "bg-[#F7F5ED]"
+                    index === 2 ? "bg-[#A7B999]" : "bg-[#F7F5ED]"
                   }`}
                 >
                   {index === 2 && (
@@ -242,9 +247,7 @@ const MainContent = () => {
             className="relative mx-auto h-[350px] w-full max-w-[420px]"
           >
             <div className="absolute left-[20%] top-[7%] h-[78%] w-[58%] rounded-full bg-[#A7B999]" />
-
             <div className="absolute right-[10%] top-0 h-[95%] w-[55%] bg-white" />
-
             <div className="absolute left-[9%] top-[34%] z-10 h-10 w-10 border border-dashed border-black" />
           </motion.div>
         </div>
@@ -286,7 +289,6 @@ const MainContent = () => {
                   <span className="text-[9px] tracking-widest text-[#F2A64E]">
                     {"★".repeat(testimonial.rating)}
                   </span>
-
                   <span className="h-7 w-7 rounded-full bg-[#D3D3CD]" />
                 </div>
 
@@ -367,4 +369,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent; 
+export default MainContent;
