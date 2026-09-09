@@ -1,0 +1,15 @@
+.user-card {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.user-card h1 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+}
+
+.user-card p {
+  margin: 6px 0;
+}
