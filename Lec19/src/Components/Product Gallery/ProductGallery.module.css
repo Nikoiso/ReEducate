@@ -1,0 +1,48 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 445px;
+    min-width: 445px;
+  }
+  
+  .mainImageContainer {
+    width: 100%;
+  }
+  
+  .mainImage {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+  }
+  
+  .thumbnailRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .thumbWrapper {
+    width: 88px !important;
+    height: 88px !important;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #ffffff;
+  }
+  
+  .thumbWrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+  }
+  
+  .activeThumb {
+    border: 2px solid #FF7E1B;
+  }
+  
+  .activeThumb img {
+    opacity: 0.4;
+  }

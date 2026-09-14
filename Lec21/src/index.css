@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;700&family=League+Spartan:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-darkBlue: #070724;
+  --color-darkGrey: #38384f;
+  --color-lightGrey: #838391;
+  --font-antonio: "Antonio", sans-serif;
+  --font-spartan: "League Spartan", "Spartan", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #070724 !important;
+  color: #ffffff;
+  font-family: var(--font-spartan);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+:root {
+  --color-mercury: #419ebb;
+  --color-venus: #eda249;
+  --color-earth: #6d2ed5;
+  --color-mars: #d14c32;
+  --color-jupiter: #d83a34;
+  --color-saturn: #cd5120;
+  --color-uranus: #1ec2a4;
+  --color-neptune: #2d68f0;
+}

@@ -1,0 +1,18 @@
+.AccordionCard {
+  background: white;
+  width: 500px;
+  min-height: 450px;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
