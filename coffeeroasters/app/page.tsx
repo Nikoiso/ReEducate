@@ -1,20 +1,24 @@
-import Hero from '@/components/Hero';
-import Link from 'next/link';
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Collection from "@/components/Collection";
+import Benefits from "@/components/Benefits";
+import HowItWorks from "@/components/HowItWorks";
+import Footer from "@/components/Footer";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto px-6 space-y-28">
-      <Hero 
-        title="Great coffee made simple." 
-        description="Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule."
-        showButton={true}
-      />
-      <div className="text-center">
-        <h2 className="text-4xl font-serif font-bold mb-6">Uncompromising quality</h2>
-        <p className="text-[#83888F] max-w-xl mx-auto">
-          We deliver pristine coffee packed with flavor and freshness to elevate your daily routine.
-        </p>
-      </div>
-    </div>
+    <main className="min-h-screen overflow-hidden bg-[#FEFCF7]">
+      <Header />
+
+      <Hero />
+
+      <Collection />
+
+      <Benefits />
+
+      <HowItWorks />
+
+      <Footer />
+    </main>
   );
 }
