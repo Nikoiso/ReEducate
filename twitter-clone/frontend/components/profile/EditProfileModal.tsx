@@ -1,0 +1,10 @@
+"use client";
+import { useState } from "react";
+import Modal from "@/components/ui/Modal";
+import api from "@/lib/api";
+import type { User } from "@/types/user";
+export default function EditProfileModal({ open, onClose, user, onUpdated }: { open: boolean; onClose: () => void; user: User; onUpdated: () => void }) {
+  const [name, setName] = useState(user.name); const [bio, setBio] = useState(user.bio ?? ""); const [avatar, setAvatar] = useState<File | null>(null); const [cover, setCover] = useState<File | null>(null); const [loading, setLoading] = useState(false);
+  const save = async (event: React.FormEvent) => { event.preventDefault(); setLoading(true); try { const data = new FormData(); data.append("name", name); data.append("bio", bio); if (avatar) data.append("avatar", avatar); await api.put("/users/profile", data); if (cover) { const coverData = new FormData(); coverData.append("cover", cover); await api.put("/users/cover", coverData); } onUpdated(); onClose(); } finally { setLoading(false); } };
+  return <Modal open={open} onClose={onClose}><form onSubmit={save} className="p-5"><div className="mb-4 flex justify-between"><h2 className="text-xl font-bold">Edit profile</h2><button type="button" onClick={onClose}>✕</button></div><label className="block text-sm font-medium">Name<input value={name} onChange={(event) => setName(event.target.value)} maxLength={50} className="mt-1 w-full rounded border p-2" /></label><label className="mt-3 block text-sm font-medium">Bio<textarea value={bio} onChange={(event) => setBio(event.target.value)} maxLength={160} className="mt-1 w-full rounded border p-2" /></label><label className="mt-3 block text-sm font-medium">Avatar<input type="file" accept="image/*" onChange={(event) => setAvatar(event.target.files?.[0] ?? null)} className="mt-1 block" /></label><label className="mt-3 block text-sm font-medium">Cover image<input type="file" accept="image/*" onChange={(event) => setCover(event.target.files?.[0] ?? null)} className="mt-1 block" /></label><button disabled={loading} className="mt-5 rounded-full bg-black px-5 py-2 font-bold text-white">{loading ? "Saving..." : "Save"}</button></form></Modal>;
+}
